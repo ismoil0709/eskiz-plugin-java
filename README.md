@@ -47,8 +47,10 @@ Ensure the following tools and environments are available:
 - **Java** (version 11 or higher)
 - **Maven** (for dependency management)
 - Access to [Eskiz API](https://eskiz.uz/) credentials:
-  - `API Token`
-  - `Base URL`
+  - `Email`
+  - `Password`
+  - `Sender Name`
+  - `Callback URL`
 
 ---
 
@@ -63,7 +65,16 @@ Ensure the following tools and environments are available:
 
 2. Configure the application:
 
-   Update `EskizProperties.java` with your Eskiz API credentials.
+   Update the `application.yml` file with your Eskiz API credentials:
+
+   ```yaml
+   eskiz:
+     simulate: false           # Set to true for testing without actually sending SMS
+     email: 'your-email'       # Your registered email on Eskiz
+     password: 'your-password' # Your Eskiz account password
+     sender-name: 'your-sender-name' # The sender name or ID used in SMS
+     callback-url: 'your-callback-url' # Optional callback URL for delivery reports
+   ```
 
 3. Build the project using Maven:
 
@@ -121,17 +132,6 @@ public void createTemplate() {
 
 ---
 
-## Configuration
-
-To integrate this plugin, ensure you configure the following properties in `application.properties` or equivalent:
-
-```properties
-eskiz.api.base-url=https://sms.eskiz.uz
-eskiz.api.token=your-api-token-here
-```
-
----
-
 ## Contribution
 
 We welcome contributions! Please follow these steps:
@@ -156,6 +156,6 @@ For any issues or inquiries, please contact:
 
 - **Developer Name:** Your Name  
 - **Email:** javoxiryallayev1@gmail.com  
-- **GitHub:** [javadeveloper0612](https://github.com/javadeveloper0612)
+- **GitHub:** [javohirdeveloper0612](https://github.com/javohirdeveloper0612)
 
 ---
