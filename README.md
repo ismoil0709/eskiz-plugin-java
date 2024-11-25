@@ -154,7 +154,7 @@ This project is licensed under the **MIT License**. See the `LICENSE` file for d
 
 For any issues or inquiries, please contact:
 
-- **Developer Name:** Your Name  
+- **Developer Name:** Javohir Yallayev
 - **Email:** javoxiryallayev1@gmail.com  
 - **GitHub:** [javohirdeveloper0612](https://github.com/javohirdeveloper0612)
 
