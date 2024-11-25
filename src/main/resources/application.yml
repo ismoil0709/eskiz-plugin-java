@@ -1,0 +1,6 @@
+eskiz:
+  simulate: false
+  email: 'email'
+  password: 'password'
+  sender-name: ''
+  callback-url: "callback-url"
