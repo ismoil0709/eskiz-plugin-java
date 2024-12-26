@@ -4,7 +4,6 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpStatusCode;
-import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.BodyInserters;
 import org.springframework.web.reactive.function.client.WebClient;
 import uz.eskiz.dto.request.CommonResultData;
@@ -18,12 +17,14 @@ import uz.eskiz.util.HelperUtil;
 import java.util.List;
 import java.util.Optional;
 
-import static uz.eskiz.enums.Constants.*;
+import static uz.eskiz.enums.Constants.AUTHORIZATION_HEADER;
+import static uz.eskiz.enums.Constants.BEARER_TOKEN;
+import static uz.eskiz.enums.Constants.GET_REPORT_BY_YEAR;
+import static uz.eskiz.enums.Constants.GET_REPORT_TOTAL_BY_YEAR_MONTH;
 import static uz.eskiz.util.HelperUtil.getInfoFormData;
 import static uz.eskiz.util.HelperUtil.isYearAndMonthValid;
 
 @Slf4j
-@Service
 @RequiredArgsConstructor
 public class ReportServiceImpl implements ReportService {
 

@@ -3,7 +3,6 @@ package uz.eskiz.service.impl;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatusCode;
-import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 import uz.eskiz.dto.request.CommonResultData;
 import uz.eskiz.dto.response.UserDataResponseDTO;
@@ -11,10 +10,11 @@ import uz.eskiz.service.UserDataService;
 import uz.eskiz.storage.TokenStorage;
 import uz.eskiz.util.HelperUtil;
 
-import static uz.eskiz.enums.Constants.*;
+import static uz.eskiz.enums.Constants.AUTHORIZATION_HEADER;
+import static uz.eskiz.enums.Constants.BEARER_TOKEN;
+import static uz.eskiz.enums.Constants.GET_USER_DATA;
 
 @Slf4j
-@Service
 @RequiredArgsConstructor
 public class UserDataServiceImpl implements UserDataService {
 

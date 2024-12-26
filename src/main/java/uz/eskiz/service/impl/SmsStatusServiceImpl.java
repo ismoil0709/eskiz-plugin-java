@@ -4,7 +4,6 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpStatusCode;
-import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.BodyInserters;
 import org.springframework.web.reactive.function.client.WebClient;
 import uz.eskiz.dto.request.CommonResultData;
@@ -17,11 +16,13 @@ import uz.eskiz.util.HelperUtil;
 
 import java.util.Optional;
 
-import static uz.eskiz.enums.Constants.*;
+import static uz.eskiz.enums.Constants.AUTHORIZATION_HEADER;
+import static uz.eskiz.enums.Constants.BEARER_TOKEN;
+import static uz.eskiz.enums.Constants.GET_SMS_STATUS_BY_DISPATCH_ID;
+import static uz.eskiz.enums.Constants.GET_SMS_STATUS_BY_SMS_ID;
 import static uz.eskiz.util.HelperUtil.getInfoFormData;
 
 @Slf4j
-@Service
 @RequiredArgsConstructor
 public class SmsStatusServiceImpl implements SmsStatusService {
     private final WebClient webClient;

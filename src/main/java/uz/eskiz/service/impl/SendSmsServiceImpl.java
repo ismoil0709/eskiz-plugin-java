@@ -5,7 +5,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.MediaType;
-import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.BodyInserters;
 import org.springframework.web.reactive.function.client.WebClient;
 import uz.eskiz.config.properties.EskizProperties;
@@ -19,11 +18,12 @@ import uz.eskiz.util.HelperUtil;
 
 import java.util.Optional;
 
-import static uz.eskiz.enums.Constants.*;
+import static uz.eskiz.enums.Constants.BEARER_TOKEN;
+import static uz.eskiz.enums.Constants.SEND_SMS;
+import static uz.eskiz.enums.Constants.SEND_SMS_DISPATCH;
 import static uz.eskiz.util.HelperUtil.sendSmsFormData;
 
 @Slf4j
-@Service
 @RequiredArgsConstructor
 public class SendSmsServiceImpl implements SendSmsService {
 
